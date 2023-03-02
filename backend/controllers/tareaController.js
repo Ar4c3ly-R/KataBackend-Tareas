@@ -29,7 +29,7 @@ const setTarea = asyncHandler (async (req, res) => {
 
 const updateTarea = asyncHandler(async (req, res)=> {
 
-const tarea = await Tarea.findById(req.params.id)
+const tarea = await Tarea.find(req.params.id)
 
 if(!tarea){
     res.status(400)
